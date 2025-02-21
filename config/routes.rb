@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :wrestlers
-  resources :weight_classes, only: [:index, :show]
+  resources :weight_classes, only: [:index, :show, :create, :destroy]
 
   #since defining route using resources, i dont need to manually redefine the statements
-  
+
   # get '/weight_classes' => 'weight_classes#index'
   # get '/weight_classes/:id' => 'weight_classes#show'
   # post '/weight_classes' => 'weight_classes#create'

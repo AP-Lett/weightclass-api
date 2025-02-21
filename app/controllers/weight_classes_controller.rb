@@ -15,12 +15,6 @@ class WeightClassesController < ApplicationController
     render json: weight_class
   end
 
-  def update #works
-    weight_class = WeightClass.find(params[:id])
-    weight_class.update(wc: params[:wc])
-    render json: weight_class
-  end
-
   def destroy #works
     weight_class = WeightClass.find(params[:id])
     weight_class.destroy

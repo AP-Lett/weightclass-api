@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :wrestlers
   resources :weight_classes, only: [:index, :show, :create, :destroy]
 
+  post '/signup', to: 'users#create'
+  post '/login', to: 'sessions#create'
+  
   #since defining route using resources, i dont need to manually redefine the statements
 
   # get '/weight_classes' => 'weight_classes#index'

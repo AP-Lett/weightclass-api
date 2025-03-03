@@ -1,5 +1,5 @@
 class WeightClassesController < ApplicationController
-
+  before_action :authorize_request
   def index #works
     weight_classes = WeightClass.all
     render json: weight_classes

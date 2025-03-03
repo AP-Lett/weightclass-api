@@ -1,4 +1,6 @@
 class WrestlersController < ApplicationController
+  before_action :authorize_request
+  
   def index #works
     wrestlers = Wrestler.all
     render json: wrestlers
